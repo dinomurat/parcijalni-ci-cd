@@ -16,7 +16,7 @@ jobs:
             password: ${{ secrets.PASSWORD }}
             script: |
                 cd /var/www/html/App/dmurat
-                git pull git@github.com:dinomurat/parcijalni-ci-cd.git
+                git pull origin main
                 composer install --no-dev
                 php artisan migrate
                 php artisan config:cache
