@@ -16,7 +16,7 @@ jobs:
             password: ${{ secrets.PASSWORD }}
             script: |
                 cd /var/www/html/App/dmurat
-                git pull origin main
+                git pull
                 composer install --no-dev
                 php artisan migrate
                 php artisan config:cache
